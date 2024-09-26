@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Screen</title>
+    <link rel="stylesheet" href="loadingscreen.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="loading-container">
+        <img src="https://static.vecteezy.com/system/resources/previews/020/975/574/large_2x/window-10-logo-window-10-icon-transparent-free-png.png" alt="Windows Logo" class="windows-logo"> <!-- Add your Windows logo image here -->
+        <div class="spinner">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+    <script>
+        // Redirect to installation.html after 30 seconds
+        setTimeout(function() {
+            window.location.href = 'installation_options.html';
+        }, 30000);
+    </script>
+    <script src="loadingscreen.js"></script> <!-- Link to your JavaScript file if needed -->
+</body>
+</html>

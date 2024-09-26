@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows 10 Installation</title>
+    <link rel="stylesheet" href="install.css"> <!-- Link to your CSS file -->
+    <style>
+        body {
+            background-color: #170750; /* Windows 10 blue */
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 40px; /* Increased padding */
+            border-radius: 8px;
+            width: 80%; /* Wider container */
+            max-width: 800px; /* Maximum width */
+            border-top: 50px solid #ccc; /* Window color */
+            border-bottom: 10px solid #ccc; /* Window color */
+            border-left: 10px solid #ccc; /* Window color */
+            border-right: 10px solid #ccc; /* Window color */
+            height: 425px; /* Full height */
+        }
+        button {
+            margin-top: 15%; /* Adds space above the button */
+            margin-right: -750px; /* Negative margin might move the button off-screen, adjust as needed */
+            padding: 10px 20px; /* Button padding for spacing inside */
+            border: 1px solid #A8BDD6; /* Button border color */
+            border-radius: 4px; /* Rounded corners */
+            background-color: #170750; /* Windows 10 blue */
+            color: white; /* Button text color */
+            cursor: pointer; /* Pointer cursor on hover */
+            font-size: 16px; /* Text size */
+        }
+        button:hover {
+            background-color: #1A1C6A;
+        }
+        .underline {
+            text-decoration: underline; /* Underline the text */
+        }
+        .privacy {
+            margin-top: 200px;
+            margin-left: -675px;
+            color: blue;
+        }
+        .key {
+            margin-top: -20px;
+            margin-left: 1000px;
+            color: blue;
+        }
+         .footer {
+           margin-top: 175px; 
+           margin-left: -550px;
+         }
+        .Activate {
+          color: blue;
+          font-size: 24px;
+          font-weight: bold;
+          text-align: center;
+          margin-top: 10px;
+          margin-left: -550px;
+        }           
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <h2 class="Activate">Activate Windows</h2>
+            <button type="button" onclick="window.location.href='blank.html';">
+            <span class="underline"">N</span>ext
+            </button>
+        </form>
+        <div class="privacy">
+        <span class="underline">P</span>rivacy statement
+            <div class="key">
+            <span class="underline">I</span> don't have a product key
+    </div>
+</body>
+</html>
