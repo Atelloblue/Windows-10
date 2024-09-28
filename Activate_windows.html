@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Windows 10 Installation</title>
-    <link rel="stylesheet" href="install.css"> <!-- Link to your CSS file -->
     <style>
         body {
             background-color: #170750; /* Windows 10 blue */
@@ -20,69 +19,115 @@
         .container {
             text-align: center;
             background: white;
-            padding: 40px; /* Increased padding */
+            padding: 40px;
             border-radius: 8px;
-            width: 80%; /* Wider container */
-            max-width: 800px; /* Maximum width */
-            border-top: 50px solid #ccc; /* Window color */
-            border-bottom: 10px solid #ccc; /* Window color */
-            border-left: 10px solid #ccc; /* Window color */
-            border-right: 10px solid #ccc; /* Window color */
-            height: 425px; /* Full height */
+            width: 80%;
+            max-width: 800px;
+            border-top: 50px solid #ccc;
+            border-bottom: 10px solid #ccc;
+            border-left: 10px solid #ccc;
+            border-right: 10px solid #ccc;
+            height: 425px;
+        }
+        h2 {
+            color: #170750;
+        }
+        p {
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: 60%;
+            margin-bottom: 20px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #A8BDD6;
+            border-radius: 4px
         }
         button {
-            margin-top: 15%; /* Adds space above the button */
-            margin-right: -750px; /* Negative margin might move the button off-screen, adjust as needed */
-            padding: 10px 20px; /* Button padding for spacing inside */
-            border: 1px solid #A8BDD6; /* Button border color */
-            border-radius: 4px; /* Rounded corners */
-            background-color: #170750; /* Windows 10 blue */
-            color: white; /* Button text color */
-            cursor: pointer; /* Pointer cursor on hover */
-            font-size: 16px; /* Text size */
+            margin-top: 15%;
+            padding: 10px 20px;
+            border: 1px solid #A8BDD6;
+            border-radius: 4px;
+            background-color: #170750;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
         }
         button:hover {
             background-color: #1A1C6A;
         }
         .underline {
-            text-decoration: underline; /* Underline the text */
+            text-decoration: underline;
+        }
+        .privacy, .key {
+            color: blue;
+            cursor: pointer;
         }
         .privacy {
-            margin-top: 200px;
-            margin-left: -675px;
-            color: blue;
+            margin-top: -10px;
+            margin-left: 5px;
         }
         .key {
-            margin-top: -20px;
-            margin-left: 1000px;
-            color: blue;
+            margin-top: 10px;
+            margin-left: 450px;
         }
-         .footer {
-           margin-top: 175px; 
-           margin-left: -550px;
-         }
         .Activate {
-          color: blue;
-          font-size: 24px;
-          font-weight: bold;
-          text-align: center;
-          margin-top: 10px;
-          margin-left: -550px;
-        }           
+            color: blue;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 10px;
+            margin-left: -550px;
+        }
+        /* Progress Bar Styles */
+        .progress-container {
+            width: 1000px;
+            background: #ccc;
+            border-radius: 5px;
+            margin: 20px 0;
+            height: 35px;
+            margin-left: -100px;
+            margin-top: 50px;
+        }
+        .progress-bar {
+            height: 100%;
+            width: 0%; /* Set initial width to 0% */
+            background: green;
+            border-radius: 5px;
+            transition: width 0.4s ease;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <form>
-            <h2 class="Activate">Activate Windows</h2>
-            <button type="button" onclick="window.location.href='blank.html';">
-            <span class="underline"">N</span>ext
-            </button>
-        </form>
-        <div class="privacy">
-        <span class="underline">P</span>rivacy statement
-            <div class="key">
-            <span class="underline">I</span> don't have a product key
-    </div>
-</body>
-</html>
+        <h2 class="Activate">Activate Windows</h2>
+        <p>If this is the first time you're installing Windows on this PC (or you're installing a different edition). you need to enter a valid Windows product key. Your product key should be in the confirmation email you received after buying a digital copy of Windows or on a label inside the box that Windows came in.</p>
+        <p>The product key looks like this: XXXXX-XXXXX-XXXXX-XXXXX-XXXXX</p>
+        <p>If you're reinstalling Windows, select I don't have a product key. Your copy of Windows will be automatically activated later.</p>
+        
+        <!-- Product Key Input -->
+        <input type="text" id="productKey" name="productKey" placeholder="XXXXX-XXXXX-XXXXX-XXXXX-XXXXX" maxlength="29" required oninput="formatKey(this)">
+
+        <button type="button" onclick="window.location.href='blank.html';">
+            <span class="underline">N</span>ext
+        </button>
+        
+        <div class="footer">
+            <span class="privacy"><span class="underline">P</span>rivacy statement</span>
+            <span class="key"><span class="underline">I</span> don't have a product key</span>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar" style="width: 8%;"></div> <!-- Change width to represent progress -->
+            <h1 style="position: absolute; bottom: 18px; left: 340px; color: #170750; transform: scaleY(2);">|</h1>
+        </div>
+         </div>
+        <h1 style="position: absolute; bottom: -45px; left: 120px;">1</h1>
+        <h5 style="position: absolute; bottom: -20px; left: 150px;">Collecting information</h5>
+        <h1 style="position: absolute; bottom: -45px; left: 330px;">2</h1>
+        <h5 style="position: absolute; bottom: -20px; left: 360px;">Installing Windows</h5>
+       </div>
+         </body>
+      </html>
