@@ -49,16 +49,16 @@ body {
 }
 
 .circle:nth-child(3) {
-    width: 12px; /* Circle size */
-    height: 12px; /* Circle size */
+    width: 6px; /* Circle size */
+    height: 6px; /* Circle size */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(180deg) translate(25px); /* Position to the left */
 }
 
 .circle:nth-child(4) {
-    width: 12px; /* Circle size */
-    height: 12px; /* Circle size */
+    width: 6px; /* Circle size */
+    height: 6px; /* Circle size */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(270deg) translate(25px); /* Position at the bottom */
@@ -66,24 +66,24 @@ body {
 
 /* Add more circles for a complete circular effect */
 .circle:nth-child(5) {
-    width: 12px; /* Circle size */
-    height: 12px; /* Circle size */
+    width: 6px; /* Circle size */
+    height: 6px; /* Circle size */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(45deg) translate(25px); /* Position diagonal */
 }
 
 .circle:nth-child(6) {
-    width: 12px; /* Circle size */
-    height: 12px; /* Circle size */
+    width: 6px; /* Circle size */
+    height: 6px; /* Circle size */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(135deg) translate(25px); /* Position diagonal */
 }
 
 .circle:nth-child(7) {
-    width: 12px; /* Circle size */
-    height: 12px; /* Circle size */
+    width: 6px; /* Circle size */
+    height: 6px; /* Circle size */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(225deg) translate(25px); /* Position diagonal */
