@@ -14,7 +14,7 @@ body {
 }
 
 .windows-logo {
-    width: 350px; /* Adjust size as necessary */
+    width: 150px; /* Adjust size as necessary */
     margin-bottom: 10px; /* Reduced space below the logo */
     margin-top: 10px; /* You can also set a margin-top if needed */
 }
@@ -30,7 +30,8 @@ body {
     height: 60px; /* Size of the spinner */
     margin: auto; /* Center the spinner */
     animation: spin 1.5s linear infinite; /* Make the entire spinner rotate */
-    margin-top: 300px;
+    margin-top: 320px;
+    margin-bottom: -30px;
 }
 
 /* Create the circles */
