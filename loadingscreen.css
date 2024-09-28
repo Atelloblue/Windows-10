@@ -38,12 +38,11 @@ body {
     position: absolute;
     border-radius: 50%;
     background: white; /* Circle color */
-    opacity: 0.8; /* Slightly transparent */
 }
 
 .circle:nth-child(2) {
-    width: 12px; /* Circle size */
-    height: 12px; /* Circle size */
+    width: 8px; /* Circle size */
+    height: 8px; /* Circle size */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(90deg) translate(25px); /* Position at the top */
