@@ -1,10 +1,126 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loading Screen</title>
-    <link rel="stylesheet" href="loadingscreen.css"> <!-- Link to your CSS file -->
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000; /* Black background */
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .loading-container {
+            text-align: center;
+        }
+
+        .windows-logo {
+            width: 150px; /* Adjust size as necessary */
+            margin-bottom: 10px; /* Reduced space below the logo */
+            margin-top: 10px; /* You can also set a margin-top if needed */
+        }
+
+        .loading-text {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .spinner {
+            position: relative;
+            width: 60px; /* Size of the spinner */
+            height: 60px; /* Size of the spinner */
+            margin: auto; /* Center the spinner */
+            animation: spin 1.5s linear infinite; /* Make the entire spinner rotate */
+            margin-top: 320px;
+            margin-bottom: -30px;
+        }
+
+        /* Create the circles */
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: white; /* Circle color */
+        }
+
+        .circle:nth-child(1) {
+            width: 6px; /* Circle size */
+            height: 6px; /* Circle size */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(0deg) translate(25px); /* Position at the top */
+        }
+
+        .circle:nth-child(2) {
+            width: 6px; /* Circle size */
+            height: 6px; /* Circle size */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg) translate(25px); /* Position diagonal */
+        }
+
+        .circle:nth-child(3) {
+            width: 6px; /* Circle size */
+            height: 6px; /* Circle size */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(90deg) translate(25px); /* Position at the top */
+        }
+
+        .circle:nth-child(4) {
+            width: 6px; /* Circle size */
+            height: 6px; /* Circle size */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(135deg) translate(25px); /* Position diagonal */
+        }
+
+        .circle:nth-child(5) {
+            width: 6px; /* Circle size */
+            height: 6px; /* Circle size */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(180deg) translate(25px); /* Position to the left */
+        }
+
+        .circle:nth-child(6) {
+            width: 6px; /* Circle size */
+            height: 6px; /* Circle size */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(225deg) translate(25px); /* Position diagonal */
+        }
+
+        .circle:nth-child(7) {
+            width: 6px; /* Circle size */
+            height: 6px; /* Circle size */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(270deg) translate(25px); /* Position at the bottom */
+        }
+
+        .circle:nth-child(8) {
+            width: 6px; /* Circle size */
+            height: 6px; /* Circle size */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(315deg) translate(25px); /* Position diagonal */
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="loading-container">
@@ -26,6 +142,5 @@
             window.location.href = 'installation_options.html';
         }, 30000);
     </script>
-    <script src="loadingscreen.js"></script> <!-- Link to your JavaScript file if needed -->
 </body>
 </html>
